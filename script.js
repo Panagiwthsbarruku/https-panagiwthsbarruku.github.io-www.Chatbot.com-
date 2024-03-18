@@ -68,6 +68,13 @@ function sendMessage() {
 
   // Καθαρίζουμε το πεδίο εισαγωγής
   document.getElementById("user-input").value = "";
+  
+  // Εξαφάνιση του μηνύματος καλωσορίσματος
+  var welcomeMessage = document.getElementById("welcome-message");
+if (welcomeMessage && welcomeMessage.style.display !== "none") {
+  welcomeMessage.style.display = "none";
+}
+
   return false; // Αποφύγετε την προεπιλεγμένη συμπεριφορά της φόρμας
 }
 document.getElementById("user-input").addEventListener("keypress", function(event) {
